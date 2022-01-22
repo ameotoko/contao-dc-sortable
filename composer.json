@@ -1,0 +1,33 @@
+{
+    "name": "ameotoko/contao-dc-sortable",
+    "type": "contao-bundle",
+    "description": "Contao 4 DataContainer driver with drag'n'drop sorting support",
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Andrey Vinichenko",
+            "homepage": "https://github.com/ameotoko"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "contao/core-bundle": "^4.9",
+        "symfony/config": "^4.4 || ^5.1",
+        "symfony/dependency-injection": "^4.4 || ^5.1",
+        "symfony/http-kernel": "^4.4 || ^5.1"
+    },
+    "conflict": {
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0",
+    },
+    "extra": {
+        "contao-manager-plugin": "Ameotoko\\DCSortableBundle\\ContaoManager\\Plugin"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ameotoko\\DCSortableBundle\\": "src/"
+        }
+    }
+}
