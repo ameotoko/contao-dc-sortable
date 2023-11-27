@@ -2,12 +2,8 @@
 
 declare(strict_types=1);
 
-/*
- * This file is part of [package name].
- *
- * (c) John Doe
- *
- * @license LGPL-3.0-or-later
+/**
+ * @author Andrey Vinichenko <andrey.vinichenko@gmail.com>
  */
 
 namespace Ameotoko\DCSortableBundle\ContaoManager;
@@ -20,7 +16,7 @@ use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
 
 class Plugin implements BundlePluginInterface
 {
-    public function getBundles(ParserInterface $parser)
+    public function getBundles(ParserInterface $parser): array
     {
         return [
             BundleConfig::create(AmeotokoDCSortableBundle::class)
