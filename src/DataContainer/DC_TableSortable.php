@@ -17,7 +17,7 @@ use Contao\Message;
 use Contao\StringUtil;
 use Contao\System;
 
-class DC_SortableTable extends DC_Table
+class DC_TableSortable extends DC_Table
 {
     /**
      * @todo possibly override:
@@ -27,8 +27,8 @@ class DC_SortableTable extends DC_Table
     {
         $packages = System::getContainer()->get('assets.packages');
 
-        $GLOBALS['TL_CSS'][] = $packages->getUrl('sortable.css', 'ameotokodcsortable');
-        $GLOBALS['TL_JAVASCRIPT'][] = $packages->getUrl('sortable.js', 'ameotokodcsortable');
+        // $GLOBALS['TL_CSS'][] = $packages->getUrl('sortable.css', 'ameotokodcsortable');
+        $GLOBALS['TL_JAVASCRIPT'][] = $packages->getUrl('backend.js', 'ameotokodcsortable');
 
         $table = ($GLOBALS['TL_DCA'][$this->strTable]['list']['sorting']['mode'] ?? null) == 6 ? $this->ptable : $this->strTable;
         $orderBy = $GLOBALS['TL_DCA'][$this->strTable]['list']['sorting']['fields'] ?? array();
