@@ -27,7 +27,7 @@ class DC_TableSortable extends DC_Table
     protected function listView(): string
     {
         $GLOBALS['TL_JAVASCRIPT'][] = System::getContainer()->get('assets.packages')
-            ->getUrl('backend.js', 'ameotoko_dc_sortable');
+            ->getUrl('dcsortable.js', 'ameotoko_dc_sortable');
 
         $table = ($GLOBALS['TL_DCA'][$this->strTable]['list']['sorting']['mode'] ?? null) == self::MODE_TREE_EXTENDED ? $this->ptable : $this->strTable;
         $orderBy = $GLOBALS['TL_DCA'][$this->strTable]['list']['sorting']['fields'] ?? array('id');

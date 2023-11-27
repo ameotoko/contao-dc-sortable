@@ -1,0 +1,14 @@
+{
+    "name": "@ameotoko/contao-dc-sortable",
+    "version": "0.0.0",
+    "author": {
+        "name": "Andrey Vinichenko"
+    },
+    "scripts": {
+        "build": "encore production --progress"
+    },
+    "private": true,
+    "devDependencies": {
+        "@symfony/webpack-encore": "^4.5.0"
+    }
+}
