@@ -11,7 +11,7 @@ composer require ameotoko/contao-dc-sortable
 
 ## Use in your data container
 
-This minimal DCA configuration to make it work:
+This is a minimal DCA configuration to make it work:
 
 ```php
 // tl_custom.php
