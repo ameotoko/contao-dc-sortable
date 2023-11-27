@@ -1,4 +1,4 @@
-window.AppBackend = {
+window.AmeotokoDCSortable = {
   makeSortable: function(tbody) {
     const ds = new Scroller(document.getElement('body'), {
       onChange: function(x, y) {

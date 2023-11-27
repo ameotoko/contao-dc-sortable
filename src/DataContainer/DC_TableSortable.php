@@ -359,7 +359,7 @@ class DC_TableSortable extends DC_Table
 </table>
 <script>
   window.location.search.search(/id=[0-9]*/) === -1 && history.replaceState({id:"placeholder"}, document.title, window.location.href + "&id=0" + "&rt=' . htmlspecialchars(System::getContainer()->get('contao.csrf.token_manager')->getDefaultTokenValue()) . '");
-  AppBackend.makeSortable("#tl_listing_sortable tbody");
+  AmeotokoDCSortable.makeSortable("#tl_listing_sortable tbody");
 </script>' . ($this->strPickerFieldType == 'radio' ? '
 <div class="tl_radio_reset">
 <label for="tl_radio_reset" class="tl_radio_label">' . $GLOBALS['TL_LANG']['MSC']['resetSelected'] . '</label> <input type="radio" name="picker" id="tl_radio_reset" value="" class="tl_tree_radio">
