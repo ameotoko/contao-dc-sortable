@@ -21,12 +21,18 @@ $GLOBALS['TL_DCA']['tl_custom'] = [
     'config' => [
         'dataContainer' => DC_TableSortable::class, // enable the driver
     ],
-    
+
     'list' => [
         'sorting' => [
             'mode' => DataContainer::MODE_SORTED, // this mode is required
             'flag' => DataContainer::SORT_ASC,
-            'fields' => ['sorting'] // drag'n'drop table must be sorted by a sorting field
+            'fields' => ['sorting'] // drag'n'drop table must be sorted by the "sorting" field
+        ],
+
+        'label' => [
+            // Contao will force the first sorting field to appear as a column in backend list view.
+            // You can prevent this using this setting (requires Contao 5.2.8 or later).
+            'showFirstOrderBy' => false
         ],
 
         // add the drag handle
@@ -38,7 +44,7 @@ $GLOBALS['TL_DCA']['tl_custom'] = [
             }
         ]]
     ],
-    
+
     // add required fields
     'fields' => [
         'id' => [

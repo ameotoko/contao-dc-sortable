@@ -199,7 +199,7 @@ class DC_TableSortable extends DC_Table
 <table class="tl_listing' . (($GLOBALS['TL_DCA'][$this->strTable]['list']['label']['showColumns'] ?? null) ? ' showColumns' : '') . ($this->strPickerFieldType ? ' picker unselectable' : '') . '">';
 
             // Automatically add the "order by" field as last column if we do not have group headers
-            if ($GLOBALS['TL_DCA'][$this->strTable]['list']['label']['showColumns'] ?? null)
+            if (($GLOBALS['TL_DCA'][$this->strTable]['list']['label']['showColumns'] ?? null) && false !== ($GLOBALS['TL_DCA'][$this->strTable]['list']['label']['showFirstOrderBy'] ?? null))
             {
                 $blnFound = false;
 
@@ -218,7 +218,7 @@ class DC_TableSortable extends DC_Table
                     }
                 }
 
-                if (!$blnFound && $firstOrderBy !== 'sorting')
+                if (!$blnFound)
                 {
                     $GLOBALS['TL_DCA'][$this->strTable]['list']['label']['fields'][] = $firstOrderBy;
                 }
