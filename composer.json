@@ -6,15 +6,12 @@
     "authors": [
         {
             "name": "Andrey Vinichenko",
-            "homepage": "https://github.com/ameotoko"
+            "homepage": "https://github.com/ameotoko/contao-dc-sortable"
         }
     ],
     "require": {
         "php": "^8.1",
-        "contao/core-bundle": "^5.2",
-        "symfony/config": "^6.3",
-        "symfony/dependency-injection": "^6.3",
-        "symfony/http-kernel": "^6.3"
+        "contao/core-bundle": "^5.2"
     },
     "conflict": {
         "contao/manager-plugin": "<2.0 || >=3.0"
